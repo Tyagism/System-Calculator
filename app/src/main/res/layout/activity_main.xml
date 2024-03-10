@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="200dp"
+    android:orientation="vertical"
+    tools:context="cal.system.systemcalculator.MainActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CustomCardViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        app:cardElevation="40dp"
+        tools:ignore="RtlHardcoded">
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:id="@+id/scroll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="click again to close History"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/txtview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/history"
+                    android:textSize="24sp" />
+
+            </ScrollView>
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/txtView2"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Privacy Policy"
+                tools:ignore="HardcodedText" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="50dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/answer"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/background_color"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="40dp">
+
+        <EditText
+            android:id="@+id/Num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:clickable="true"
+            android:ems="20"
+            android:fadingEdge="none"
+            android:focusable="true"
+            android:hint="@string/enter_number_1"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="15dp"
+            tools:ignore="Autofill" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/background_color"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="40dp">
+
+        <EditText
+            android:id="@+id/Num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:ems="20"
+            android:hint="@string/enter_number_2"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="15dp"
+            tools:ignore="Autofill" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="25dp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp">
+
+                <Button
+                    android:id="@+id/add"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/cardview_default_radius"
+                    android:text="@string/add"
+                    android:backgroundTint="@color/background_color"
+                    android:background="@color/background_color"
+                    android:textColor="#009587"
+                    android:textSize="37sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp">
+
+                <Button
+                    android:id="@+id/sub"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/cardview_default_radius"
+                    android:text="@string/sun"
+                    android:backgroundTint="@color/background_color"
+                    android:background="@color/background_color"
+                    android:textColor="#009587"
+                    android:textSize="37sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp">
+
+                <Button
+                    android:id="@+id/multiply"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/cardview_default_radius"
+                    android:text="@string/multi"
+                    android:backgroundTint="@color/background_color"
+                    android:background="@color/background_color"
+                    android:textColor="#009587"
+                    android:textSize="37sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp">
+
+                <Button
+                    android:id="@+id/divide"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/cardview_default_radius"
+                    android:text="@string/div"
+                    android:backgroundTint="@color/background_color"
+                    android:background="@color/background_color"
+                    android:textColor="#009587"
+                    android:textSize="37sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="26dp">
+
+                <Button
+                    android:id="@+id/Clsbtn"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/cardview_default_radius"
+                    android:text="@string/clear"
+                    android:backgroundTint="@color/background_color"
+                    android:background="@color/background_color"
+                    android:textColor="#009587"
+                    android:textSize="37sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp">
+
+                <Button
+                    android:id="@+id/Exitbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/cardview_default_radius"
+                    android:text="@string/exit"
+                    android:backgroundTint="@color/background_color"
+                    android:background="@color/background_color"
+                    android:textColor="#009587"
+                    android:textSize="30sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
