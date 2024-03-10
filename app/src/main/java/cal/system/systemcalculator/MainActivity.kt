@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
 
         txtview2.setOnClickListener {
-            val url = "http://www.google.com"
+            val url = "https://github.com/Tyagism/System-Calculator/blob/main/Privacy-Policy.md"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
@@ -155,9 +155,9 @@ class MainActivity : AppCompatActivity() {
         val dateEditor=datePreferences.edit()
         val oldResults=sharedPreferences.getString("results","")
         val currentDateTime=LocalDateTime.now()
-        val formatter=DateTimeFormatter.ofPattern("dd/MM/yy   hh:mm:ss")
+        val formatter=DateTimeFormatter.ofPattern("dd/MM/yy              ")
         val formattedDateTime:String=currentDateTime.format(formatter)
-        val newResult="$oldResults\n\n\n At  $formattedDateTime  \n\n\n$calculation=$result"
+        val newResult="$oldResults\n\n\n\n $formattedDateTime  \n\n$calculation=$result"
         editor.putString("results",newResult)
         dateEditor.putString("date",formattedDateTime)
         editor.apply()
