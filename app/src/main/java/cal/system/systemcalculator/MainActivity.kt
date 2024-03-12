@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         val exitbtn = findViewById<Button>(R.id.Exitbtn)
         val textView = findViewById<TextView>(R.id.textView)
         val txtview2 = findViewById<TextView>(R.id.txtView2)
-
+        val percentbtn = findViewById<Button>(R.id.percent)
 
         txtview2.setOnClickListener {
             val url = "https://github.com/Tyagism/System-Calculator/blob/main/Privacy-Policy.md"
@@ -132,6 +132,26 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+        }
+
+
+        percentbtn.setOnClickListener {
+            val addnum1 = num1.text.toString()
+            val addnum2 = num2.text.toString()
+
+            if (addnum1.isNotEmpty() && addnum2.isNotEmpty()) {
+                val result = addnum1.toFloat() * addnum2.toFloat() / 100
+                val calculation = "$addnum1 * $addnum2 / 100"
+                textView.text = "Answer : $result"
+                saveResults(calculation, result)
+            } else {
+                Toast.makeText(
+                    this,
+                    "Both numbers should not be empty" + textView.text,
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
         }
 
 
