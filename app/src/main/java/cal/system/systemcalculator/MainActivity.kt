@@ -11,8 +11,10 @@ import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.AlignmentSpan
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -48,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView)
         val txtview2 = findViewById<TextView>(R.id.txtView2)
         val percentbtn = findViewById<Button>(R.id.percent)
+        val scrollView = findViewById<ScrollView>(R.id.scroll1)
 
         txtview2.setOnClickListener {
             val url = "https://github.com/Tyagism/System-Calculator/blob/main/Privacy-Policy.md"
@@ -153,6 +156,11 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+
+
+        scrollView.post { scrollView.fullScroll(View.FOCUS_DOWN) }
+
 
 
         clsbtn.setOnClickListener {

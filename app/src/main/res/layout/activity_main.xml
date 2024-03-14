@@ -117,10 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/background_color"
-            android:clickable="true"
             android:ems="20"
-            android:fadingEdge="none"
-            android:focusable="true"
             android:hint="@string/enter_number_1"
             android:inputType="numberDecimal|numberSigned"
             android:padding="15dp"
@@ -352,7 +349,7 @@
                     android:backgroundTint="@color/background_color"
                     android:background="@color/background_color"
                     android:textColor="#009587"
-                    android:textSize="30sp" />
+                    android:textSize="37sp" />
 
 
             </androidx.cardview.widget.CardView>
